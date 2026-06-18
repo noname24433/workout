@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Plan</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0f1016;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+            border-bottom: 1px solid #222;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: #00d2ff;
+        }
+        .subtitle {
+            color: #888;
+            margin: 5px 0 0 0;
+            font-size: 1rem;
+        }
+        h2 {
+            color: #00d2ff;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #222;
+            padding-bottom: 5px;
+        }
+        .exercise-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .exercise-row {
+            background-color: #1a1b26;
+            border: 1px solid #2a2b3d;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        .exercise-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .exercise-info h3 {
+            margin: 0 0 4px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .exercise-info p {
+            margin: 0;
+            color: #888;
+            font-size: 0.85rem;
+        }
+        .metrics {
+            font-weight: bold;
+            color: #00d2ff;
+            background-color: rgba(0, 210, 255, 0.1);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            width: 240px;
+            text-align: center;
+        }
+        .right-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+        .yt-btn {
+            background-color: #242636;
+            color: #ffffff;
+            border: 1px solid #3d405a;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .yt-btn:hover {
+            background-color: #ff0000;
+            border-color: #ff0000;
+            color: #ffffff;
+        }
+        .rest-box {
+            background-color: #1a1b26;
+            border: 1px dashed #444;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-style: italic;
+        }
+        @media (max-width: 600px) {
+            .exercise-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .right-content {
+                width: 100%;
+                justify-content: space-between;
+                gap: 10px;
+            }
+            .metrics {
+                flex-grow: 1;
+                width: auto;
+                text-align: center;
+            }
+        }
+
+        /* Tabs styling */
+        .tabs-nav {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 30px;
+            background: #1a1b26;
+            padding: 6px;
+            border-radius: 12px;
+            border: 1px solid #2a2b3d;
+            overflow-x: auto;
+        }
+        .tabs-nav::-webkit-scrollbar {
+            display: none;
+        }
+        .tab-btn {
+            flex: 1 0 auto;
+            min-width: 90px;
+            background: transparent;
+            border: none;
+            color: #888;
+            padding: 10px 8px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .tab-btn span {
+            font-size: 0.7rem;
+            font-weight: 400;
+            opacity: 0.8;
+            display: block;
+            margin-top: 2px;
+        }
+        .tab-btn:hover {
+            background: #242636;
+            color: #ffffff;
+        }
+        .tab-btn.active {
+            background: #00d2ff;
+            color: #0f1016;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Video Embed Styling */
+        .exercise-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            transition: all 0.3s ease;
+        }
+        .exercise-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+        }
+        .watch-btn {
+            background-color: #242636;
+            color: #ffffff;
+            border: 1px solid #3d405a;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .watch-btn:hover {
+            background-color: #00d2ff;
+            border-color: #00d2ff;
+            color: #0f1016;
+        }
+        .watch-btn.active {
+            background-color: #00d2ff;
+            border-color: #00d2ff;
+            color: #0f1016;
+        }
+        .video-embed-container {
+            width: 100%;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, margin-top 0.3s ease-out;
+            max-height: 0;
+            margin-top: 0;
+        }
+        .video-embed-container.active {
+            max-height: 500px;
+            margin-top: 15px;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #2a2b3d;
+            background-color: #000;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Workout Plan</h1>
+        </header>
+
+        <nav class="tabs-nav">
+            <button class="tab-btn active" data-target="day1">Day 1<br><span>Chest/Tri</span></button>
+            <button class="tab-btn" data-target="day2">Day 2<br><span>Back/Bi</span></button>
+            <button class="tab-btn" data-target="day3">Day 3<br><span>Legs</span></button>
+            <button class="tab-btn" data-target="day4">Day 4<br><span>Shoulders</span></button>
+            <button class="tab-btn" data-target="day5">Day 5<br><span>Core/Abs</span></button>
+            <button class="tab-btn" data-target="day6">Day 6<br><span>Full Body</span></button>
+            <button class="tab-btn" data-target="day7">Day 7<br><span>Rest</span></button>
+        </nav>
+
+        <!-- Day 1 -->
+        <section id="day1" class="tab-content active">
+            <h2>Day 1 — Chest + Triceps</h2>
+            <ul class="exercise-list">
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Push-ups</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Push-ups" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="I9fsqKE5XHo">Watch</button>
+                            <span class="metrics">4 sets x 12 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Wide push-ups</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Wide+push-ups" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="s7bslDs8Av8">Watch</button>
+                            <span class="metrics">3 sets x 12 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Diamond push-ups</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Diamond+push-ups" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="kGhDnFwMY3E">Watch</button>
+                            <span class="metrics">3 sets x 10 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Chair dips</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Chair+dips" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="6kALZikXxLc">Watch</button>
+                            <span class="metrics">3 sets x 12 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Band tricep pushdown</h3>
+                            <p>Door anchor</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Band+tricep+pushdown" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="tdJunCgoyWA">Watch</button>
+                            <span class="metrics">3 sets x 12 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Day 2 -->
+        <section id="day2" class="tab-content">
+            <h2>Day 2 — Back + Biceps</h2>
+            <ul class="exercise-list">
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Inverted rows under table</h3>
+                            <p>Table bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Inverted+rows+under+table" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="EIFEKZe4Wm8">Watch</button>
+                            <span class="metrics">4 sets x 10 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Band seated row</h3>
+                            <p>Band around feet</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Band+seated+row" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="whSXi-EXbqI">Watch</button>
+                            <span class="metrics">4 sets x 12 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Band lat pulldown</h3>
+                            <p>Door anchor high</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Band+lat+pulldown" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="_97pmOC2tzE">Watch</button>
+                            <span class="metrics">3 sets x 12 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Band bicep curl</h3>
+                            <p>Stand on band</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Band+bicep+curl" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="AaA7Yj3zHiU">Watch</button>
+                            <span class="metrics">3 sets x 12 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Band hammer curl</h3>
+                            <p>Stand on band</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Band+hammer+curl" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="bcond2tqWg0">Watch</button>
+                            <span class="metrics">3 sets x 12 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Day 3 -->
+        <section id="day3" class="tab-content">
+            <h2>Day 3 — Legs</h2>
+            <ul class="exercise-list">
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Bodyweight squat</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Bodyweight+squat" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="8uoaYwS6iFM">Watch</button>
+                            <span class="metrics">4 sets x 20 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Lunges</h3>
+                            <p>Bodyweight • 12 each leg</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Lunges" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="mBhqeQm8RdM">Watch</button>
+                            <span class="metrics">4 sets x 12 each leg</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Glute bridge</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Glute+bridge" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="XLXGydU5DdU">Watch</button>
+                            <span class="metrics">4 sets x 15 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Wall sit</h3>
+                            <p>Wall hold</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Wall+sit" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="cWTZ8Am1Ee0">Watch</button>
+                            <span class="metrics">3 sets x 40 seconds</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Band lateral walk</h3>
+                            <p>Band around knees/ankles • 20 steps each side</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Band+lateral+walk" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="42cYOwpwOIc">Watch</button>
+                            <span class="metrics">3 sets x 20 steps each side</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Calf raises</h3>
+                            <p>On step or floor</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Calf+raises" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="BxfKOyI8sUg">Watch</button>
+                            <span class="metrics">3 sets x 20 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Day 4 -->
+        <section id="day4" class="tab-content">
+            <h2>Day 4 — Shoulders</h2>
+            <ul class="exercise-list">
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Pike push-ups</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Pike+push-ups" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="fXgou2W10ok">Watch</button>
+                            <span class="metrics">4 sets x 12 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Band lateral raise</h3>
+                            <p>Stand on band</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Band+lateral+raise" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="yfNg5sFndbw">Watch</button>
+                            <span class="metrics">3 sets x 15 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Band face pull</h3>
+                            <p>Door anchor</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Band+face+pull" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="JBpj9-3tP0c">Watch</button>
+                            <span class="metrics">3 sets x 15 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Band front raise</h3>
+                            <p>Stand on band</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Band+front+raise" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="V0wwXSlljXY">Watch</button>
+                            <span class="metrics">3 sets x 12 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Arm circles</h3>
+                            <p>30 seconds each direction</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Arm+circles" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="3STTSi_jdHk">Watch</button>
+                            <span class="metrics">2 sets x 30 seconds each direction</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Day 5 -->
+        <section id="day5" class="tab-content">
+            <h2>Day 5 — Core + Abs</h2>
+            <ul class="exercise-list">
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Plank</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Plank" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="pvIjsG5Svck">Watch</button>
+                            <span class="metrics">4 sets x 45 seconds</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Crunches</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Crunches" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="MKmrqcoCZ-M">Watch</button>
+                            <span class="metrics">3 sets x 20 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Leg raises</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Leg+raises" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="U4L_6JEv9Jg">Watch</button>
+                            <span class="metrics">3 sets x 15 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Bicycle crunches</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Bicycle+crunches" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="eqg47ZuGZXQ">Watch</button>
+                            <span class="metrics">3 sets x 20 reps</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Mountain climbers</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Mountain+climbers" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="cnyTQDSE884">Watch</button>
+                            <span class="metrics">3 sets x 30 seconds</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Superman hold</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Superman+hold" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="g0Kr9Wd3CeQ">Watch</button>
+                            <span class="metrics">3 sets x 30 seconds</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Band pallof press</h3>
+                            <p>Door anchor • 12 each side</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Band+pallof+press" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="HXrLaqNIkTs">Watch</button>
+                            <span class="metrics">3 sets x 12 each side</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Day 6 -->
+        <section id="day6" class="tab-content">
+            <h2>Day 6 — Full Body</h2>
+            <ul class="exercise-list">
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Push-ups</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Push-ups" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="I9fsqKE5XHo">Watch</button>
+                            <span class="metrics">3 sets x 12</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Inverted rows</h3>
+                            <p>Table bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Inverted+rows" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="GdyhjXlxE-U">Watch</button>
+                            <span class="metrics">3 sets x 10</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Squats</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Squats" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="8uoaYwS6iFM">Watch</button>
+                            <span class="metrics">3 sets x 15</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Pike push-ups</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Pike+push-ups" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="fXgou2W10ok">Watch</button>
+                            <span class="metrics">3 sets x 10</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Glute bridge</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Glute+bridge" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="XLXGydU5DdU">Watch</button>
+                            <span class="metrics">3 sets x 15</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-row">
+                        <div class="exercise-info">
+                            <h3>Plank</h3>
+                            <p>Bodyweight</p>
+                        </div>
+                        <div class="right-content">
+                            <a href="https://www.youtube.com/results?search_query=Plank" target="_blank" class="yt-btn">Demo</a>
+                            <button class="watch-btn" data-video-id="pvIjsG5Svck">Watch</button>
+                            <span class="metrics">3 sets x 40 seconds</span>
+                        </div>
+                    </div>
+                    <div class="video-embed-container"></div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Day 7 -->
+        <section id="day7" class="tab-content">
+            <h2>Day 7 — Rest</h2>
+            <div class="rest-box">
+                🧘‍♂️ Focus on active recovery, light stretching, and proper hydration/nutrition.
+            </div>
+        </section>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+
+                    btn.classList.add('active');
+                    const targetId = btn.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+
+            // Video Toggle Logic
+            const watchBtns = document.querySelectorAll('.watch-btn');
+            watchBtns.forEach(btn => {
+                const videoId = btn.getAttribute('data-video-id');
+                if (!videoId || videoId.trim() === '') {
+                    btn.style.display = 'none';
+                }
+                btn.addEventListener('click', () => {
+                    const exerciseItem = btn.closest('.exercise-item');
+                    const embedContainer = exerciseItem.querySelector('.video-embed-container');
+                    const videoId = btn.getAttribute('data-video-id');
+
+                    if (!videoId) return;
+
+                    // If this video is already active, close it
+                    if (embedContainer.classList.contains('active')) {
+                        embedContainer.classList.remove('active');
+                        btn.classList.remove('active');
+                        btn.textContent = 'Watch';
+                        setTimeout(() => {
+                            if (!embedContainer.classList.contains('active')) {
+                                embedContainer.innerHTML = '';
+                            }
+                        }, 300);
+                    } else {
+                        // Close any other open video players
+                        document.querySelectorAll('.video-embed-container.active').forEach(openContainer => {
+                            openContainer.classList.remove('active');
+                            const openItem = openContainer.closest('.exercise-item');
+                            const openBtn = openItem.querySelector('.watch-btn');
+                            if (openBtn) {
+                                openBtn.classList.remove('active');
+                                openBtn.textContent = 'Watch';
+                            }
+                            setTimeout(() => {
+                                if (!openContainer.classList.contains('active')) {
+                                    openContainer.innerHTML = '';
+                                }
+                            }, 300);
+                        });
+
+                        // Open this video player
+                        embedContainer.innerHTML = `
+                            <div class="video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1" 
+                                    title="Exercise Demo" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        `;
+                        embedContainer.classList.add('active');
+                        btn.classList.add('active');
+                        btn.textContent = 'Close';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
