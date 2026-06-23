@@ -17,7 +17,7 @@
 * **Band tricep pushdown (door anchor)** — 3 sets x 12 reps
 
 ### Day 2: Back + Biceps
-* **Inverted rows under table** — 4 sets x 10 reps
+* **Band single arm row (door anchor)** — 4 sets x 12 each side
 * **Band seated row (band around feet)** — 4 sets x 12 reps
 * **Band lat pulldown (door anchor high)** — 3 sets x 12 reps
 * **Band bicep curl** — 3 sets x 12 reps
@@ -49,7 +49,7 @@
 
 ### Day 6: Full Body
 * **Push-ups** — 3 sets x 12 reps
-* **Inverted rows** — 3 sets x 10 reps
+* **Band single arm row (door anchor)** — 3 sets x 10 each side
 * **Squats** — 3 sets x 15 reps
 * **Pike push-ups** — 3 sets x 10 reps
 * **Glute bridge** — 3 sets x 15 reps
