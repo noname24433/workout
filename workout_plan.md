@@ -11,86 +11,85 @@ This is a 6-day split utilizing dumbbells, resistance bands, and bodyweight.
 ---
 
 ### DAY 1 — UPPER A
-* **Dumbbell floor press** — 4 sets x 10 reps
-* **Dumbbell bent over row** — 4 sets x 10 reps
-* **Dumbbell shoulder press** — 3 sets x 12 reps
-* **Dumbbell bicep curl** — 3 sets x 12 reps
-* **Dumbbell overhead tricep extension** — 3 sets x 12 reps
-* **Band face pull (door anchor)** — 3 sets x 15 reps
-* **Band lat pulldown** — 3 sets x 12 reps
-* *(Optional)* **Dumbbell lateral raise** — 3 sets x 12 reps
-* *(Optional)* **Push-ups** — 3 sets x 12 reps
-* *(Optional)* **Chair dips** — 3 sets x 12 reps
+* **Dumbbell floor press** — 4x10
+* **Dumbbell bent over row (standing)** — 4x10
+* **Dumbbell shoulder press** — 3x12
+* **Dumbbell bicep curl** — 3x12
+* **Dumbbell overhead tricep extension** — 3x12
+* **Band face pull (door anchor)** — 3x15
+* **Band lat pulldown** — 3x12
+* *(Optional)* **Dumbbell lateral raise** — 3x12
+* *(Optional)* **Push-ups** — 3x12
+* *(Optional)* **Chair dips** — 3x12
 
 ---
 
-### DAY 2 — LOWER A
-* **Dumbbell goblet squat** — 4 sets x 12 reps
-* **Dumbbell Romanian deadlift** — 4 sets x 10 reps
-* **Dumbbell reverse lunge** — 3 sets x 12 each leg
-* **Dumbbell hip thrust** — 3 sets x 12 reps
-* **Plank** — 3 sets x 45 seconds
-* **Calf raises** — 3 sets x 20 reps
-* *(Optional)* **Wall sit** — 3 sets x 45 seconds
-* *(Optional)* **Band lateral walk** — 3 sets x 20 steps each side
-* *(Optional)* **Leg raises** — 3 sets x 15 reps
-* *(Optional)* **Bicycle crunches** — 3 sets x 20 reps
+### DAY 2 — LOWER A + CORE
+* **Dumbbell goblet squat** — 4x12
+* **Dumbbell Romanian deadlift** — 4x10
+* **Dumbbell reverse lunge** — 3x12 each leg
+* **Dumbbell glute bridge (floor)** — 3x12
+* **Calf raises** — 3x20
+* **Plank** — 3x45 sec
+* **Leg raises** — 3x15
+* **Bicycle crunches** — 3x20
+* *(Optional)* **Wall sit** — 3x45 sec
+* *(Optional)* **Band lateral walk** — 3x20 each side
 
 ---
 
 ### DAY 3 — UPPER B
-* **Dumbbell chest fly (floor)** — 4 sets x 12 reps
-* **Dumbbell single arm row** — 4 sets x 12 each side
-* **Dumbbell Arnold press** — 3 sets x 12 reps
-* **Dumbbell hammer curl** — 3 sets x 12 reps
-* **Band seated row (band around feet)** — 3 sets x 12 reps
-* **Band tricep pushdown (door anchor)** — 3 sets x 12 reps
-* *(Optional)* **Dumbbell front raise** — 3 sets x 12 reps
-* *(Optional)* **Diamond push-ups** — 3 sets x 10 reps
-* *(Optional)* **Wide push-ups** — 3 sets x 12 reps
-* *(Optional)* **Band bicep curl** — 3 sets x 12 reps
+* **Dumbbell chest fly (floor)** — 4x12
+* **Dumbbell standing single arm row** — 4x12 each side
+* **Dumbbell Arnold press** — 3x12
+* **Dumbbell hammer curl** — 3x12
+* **Band seated row** — 3x12
+* **Band tricep pushdown** — 3x12
+* *(Optional)* **Dumbbell front raise** — 3x12
+* *(Optional)* **Diamond push-ups** — 3x10
+* *(Optional)* **Wide push-ups** — 3x12
+* *(Optional)* **Band bicep curl** — 3x12
 
 ---
 
-### DAY 4 — LOWER B
-* **Dumbbell sumo squat** — 4 sets x 12 reps
-* **Dumbbell walking lunge** — 4 sets x 12 each leg
-* **Dumbbell glute bridge** — 4 sets x 15 reps
-* **Bulgarian split squat (foot on chair)** — 3 sets x 10 each leg
-* **Dumbbell calf raises** — 3 sets x 20 reps
-* **Superman hold** — 3 sets x 30 seconds
-* *(Optional)* **Band donkey kick (ankle strap)** — 3 sets x 15 each leg
-* *(Optional)* **Band fire hydrant (ankle strap)** — 3 sets x 15 each leg
-* *(Optional)* **Mountain climbers** — 3 sets x 30 seconds
-* *(Optional)* **Crunches** — 3 sets x 20 reps
+### DAY 4 — LOWER B + CORE
+* **Dumbbell sumo squat** — 4x12
+* **Dumbbell walking lunge** — 4x12 each leg
+* **Dumbbell glute bridge** — 4x15
+* **Bulgarian split squat (foot on chair)** — 3x10 each leg
+* **Dumbbell calf raises** — 3x20
+* **Crunches** — 3x20
+* **Mountain climbers** — 3x30 sec
+* **Superman hold** — 3x30 sec
+* *(Optional)* **Band donkey kick** — 3x15 each leg
+* *(Optional)* **Band fire hydrant** — 3x15 each leg
 
 ---
 
 ### DAY 5 — UPPER C
-* **Dumbbell floor press** — 4 sets x 10 reps
-* **Dumbbell bent over row** — 3 sets x 12 reps
-* **Band lat pulldown (door anchor)** — 4 sets x 12 reps
-* **Dumbbell concentration curl** — 3 sets x 12 reps
-* **Band face pull (door anchor)** — 3 sets x 15 reps
-* **Dumbbell overhead tricep extension** — 3 sets x 12 reps
-* *(Optional)* **Dumbbell lateral raise** — 3 sets x 12 reps
-* *(Optional)* **Shoulder tap push-ups** — 3 sets x 12 reps
-* *(Optional)* **Chair dips** — 3 sets x 12 reps
-* *(Optional)* **Band single arm row** — 3 sets x 12 each side
+* **Dumbbell floor press** — 4x10
+* **Dumbbell bent over row** — 3x12
+* **Band lat pulldown** — 4x12
+* **Dumbbell concentration curl** — 3x12
+* **Band face pull** — 3x15
+* **Dumbbell overhead tricep extension** — 3x12
+* *(Optional)* **Dumbbell lateral raise** — 3x12
+* *(Optional)* **Shoulder tap push-ups** — 3x12
+* *(Optional)* **Chair dips** — 3x12
+* *(Optional)* **Band single arm row** — 3x12 each side
 
 ---
 
 ### DAY 6 — LOWER C + CORE
-* **Dumbbell goblet squat** — 4 sets x 12 reps
-* **Dumbbell Romanian deadlift** — 4 sets x 10 reps
-* **Dumbbell hip thrust** — 3 sets x 12 reps
-* **Plank** — 4 sets x 45 seconds
-* **Leg raises** — 3 sets x 15 reps
-* **Dumbbell calf raises** — 3 sets x 20 reps
-* *(Optional)* **Band lateral walk** — 3 sets x 20 steps each side
-* *(Optional)* **Bicycle crunches** — 3 sets x 20 reps
-* *(Optional)* **Mountain climbers** — 3 sets x 30 seconds
-* *(Optional)* **Superman hold** — 3 sets x 30 seconds
+* **Dumbbell goblet squat** — 4x12
+* **Dumbbell Romanian deadlift** — 4x10
+* **Dumbbell glute bridge** — 3x12
+* **Dumbbell calf raises** — 3x20
+* **Plank** — 4x45 sec
+* **Leg raises** — 3x15
+* **Russian twist (dumbbell)** — 3x20
+* *(Optional)* **Bicycle crunches** — 3x20
+* *(Optional)* **Mountain climbers** — 3x30 sec
 
 ---
 
