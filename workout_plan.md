@@ -10,86 +10,68 @@ This is a 6-day split utilizing dumbbells, resistance bands, and bodyweight.
 
 ---
 
-### DAY 1 — UPPER A
-* **Dumbbell floor press** — 4x10
-* **Dumbbell bent over row (standing)** — 4x10
-* **Dumbbell shoulder press** — 3x12
-* **Dumbbell bicep curl** — 3x12
-* **Dumbbell overhead tricep extension** — 3x12
-* **Band face pull (door anchor)** — 3x15
-* **Band lat pulldown** — 3x12
-* *(Optional)* **Dumbbell lateral raise** — 3x12
-* *(Optional)* **Push-ups** — 3x12
-* *(Optional)* **Chair dips** — 3x12
-
----
-
-### DAY 2 — LOWER A + CORE
+### DAY 1 — LEGS
 * **Dumbbell goblet squat** — 4x12
 * **Dumbbell Romanian deadlift** — 4x10
-* **Dumbbell reverse lunge** — 3x12 each leg
-* **Dumbbell glute bridge (floor)** — 3x12
+* **Dumbbell walking lunge** — 3x12 each leg
+* **Dumbbell glute bridge (floor)** — 3x15
 * **Calf raises** — 3x20
-* **Plank** — 3x45 sec
-* **Leg raises** — 3x15
-* **Bicycle crunches** — 3x20
-* *(Optional)* **Wall sit** — 3x45 sec
-* *(Optional)* **Band lateral walk** — 3x20 each side
+* *(Optional)* **Bulgarian split squat (foot on chair)** — 3x10 each leg
 
 ---
 
-### DAY 3 — UPPER B
-* **Dumbbell chest fly (floor)** — 4x12
-* **Dumbbell standing single arm row** — 4x12 each side
-* **Dumbbell Arnold press** — 3x12
-* **Dumbbell hammer curl** — 3x12
-* **Band seated row** — 3x12
-* **Band tricep pushdown** — 3x12
-* *(Optional)* **Dumbbell front raise** — 3x12
-* *(Optional)* **Diamond push-ups** — 3x10
-* *(Optional)* **Wide push-ups** — 3x12
-* *(Optional)* **Band bicep curl** — 3x12
-
----
-
-### DAY 4 — LOWER B + CORE
-* **Dumbbell sumo squat** — 4x12
-* **Dumbbell walking lunge** — 4x12 each leg
-* **Dumbbell glute bridge** — 4x15
-* **Bulgarian split squat (foot on chair)** — 3x10 each leg
-* **Dumbbell calf raises** — 3x20
-* **Crunches** — 3x20
-* **Mountain climbers** — 3x30 sec
-* **Superman hold** — 3x30 sec
-* *(Optional)* **Band donkey kick** — 3x15 each leg
-* *(Optional)* **Band fire hydrant** — 3x15 each leg
-
----
-
-### DAY 5 — UPPER C
+### DAY 2 — PUSH + ABS
 * **Dumbbell floor press** — 4x10
-* **Dumbbell bent over row** — 3x12
-* **Band lat pulldown** — 4x12
-* **Dumbbell concentration curl** — 3x12
-* **Band face pull** — 3x15
+* **Dumbbell shoulder press** — 3x12
+* **Dumbbell chest fly (floor)** — 3x12
+* **Dumbbell lateral raise** — 3x12
 * **Dumbbell overhead tricep extension** — 3x12
-* *(Optional)* **Dumbbell lateral raise** — 3x12
-* *(Optional)* **Shoulder tap push-ups** — 3x12
-* *(Optional)* **Chair dips** — 3x12
-* *(Optional)* **Band single arm row** — 3x12 each side
+* **Plank** — 3x45s
+* **Leg raises** — 3x15
 
 ---
 
-### DAY 6 — LOWER C + CORE
-* **Dumbbell goblet squat** — 4x12
-* **Dumbbell Romanian deadlift** — 4x10
-* **Dumbbell glute bridge** — 3x12
-* **Dumbbell calf raises** — 3x20
-* **Plank** — 4x45 sec
-* **Leg raises** — 3x15
+### DAY 3 — PULL + ABS
+* **Dumbbell standing single arm row** — 4x12 each side
+* **Band lat pulldown (door anchor)** — 4x12
+* **Band face pull (door anchor)** — 3x15
+* **Dumbbell bicep curl** — 3x12
+* **Dumbbell hammer curl** — 3x12
+* **Crunches** — 3x20
+* **Bicycle crunches** — 3x20
+
+---
+
+### DAY 4 — PUSH + ABS
+* **Dumbbell Arnold press** — 3x12
+* **Dumbbell floor press** — 4x10
+* **Dumbbell front raise** — 3x12
+* **Band tricep pushdown (door anchor)** — 3x12
+* **Chair dips** — 3x12
+* **Plank** — 4x45s
 * **Russian twist (dumbbell)** — 3x20
-* *(Optional)* **Bicycle crunches** — 3x20
-* *(Optional)* **Mountain climbers** — 3x30 sec
+
+---
+
+### DAY 5 — PULL + ABS
+* **Dumbbell bent over row (standing)** — 4x12
+* **Band seated row (band around feet)** — 3x12
+* **Band lat pulldown** — 3x12
+* **Dumbbell concentration curl** — 3x12
+* **Dumbbell hammer curl** — 3x12
+* **Mountain climbers** — 3x30s
+* **Leg raises** — 3x15
+
+---
+
+### DAY 6 — FULL UPPER (light) + ABS
+* **Push-ups** — 3x12
+* **Dumbbell shoulder press** — 3x12
+* **Dumbbell bent over row** — 3x12
+* **Dumbbell bicep curl** — 3x12
+* **Band tricep pushdown** — 3x12
+* **Plank** — 3x45s
+* **Crunches** — 3x20
 
 ---
 
